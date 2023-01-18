@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        background: #9bbbd4 ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: sans-serif;
+        }
+
+        .login {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -50%);
+        background: #50577A;
+        padding: 50px;
+        width: 270px;
+        box-shadow: 0px 0px 25px 10px black;
+        border-radius: 15px;
+        }
+
+        .avatar {
+        font-size: 30px ;
+        background: #E59866;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        position: fixed;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border-radius: 50%;
+        }
+
+        .login h2 {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        padding-top: 0;
+        margin-top: -20px;
+        }
+
+        .box-login {
+        display: flex;
+        justify-content:space-between;
+        margin: 10px;
+        border-bottom: 2px solid white;
+        padding: 8px 0;
+        }
+
+        .box-login i {
+        font-size: 23px;
+        color: white;
+        padding: 5px 0;
+        }
+        
+        .box-login input {
+        width: 85%;
+        padding: 5px 0;
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 18px;
+        }
+
+        .box-login input::placeholder {
+        color: white;
+        }
+
+        .btn-login
+        .box-login input:hover{
+        background: rgba(10, 10, 10,s 0.5);
+        }
+
+        .btn-login {
+        margin-left: 10px;
+        margin-bottom: 20px;
+        background: none;
+        border: 1px solid white;
+        width: 92.5%;
+        padding: 10px;
+        color: white;
+        font-size: 18px;
+        letter-spacing: 3px;
+        cursor: pointer;
+        }
+
+        .btn-login:hover{
+        background: rgba(12, 30, 15, 0.5);
+        }
+        
+        .footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        top: 605px;
+        width: 100%;
+        color: #78797d;
+        font-size: 14px;
+        text-align: center;
+        }
+        .footer .fa {
+        color: #7f5feb;
+        
+        }
+        .bottom {
+      margin-left: 10px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bottom a {
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .bottom a:hover {
+      text-decoration: underline;
+    }
+
+
+    .footer {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      top: 605px;
+      width: 100%;
+      color: #78797d;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .footer .fa {
+      color: #7f5feb;
+      ;
+    }
+
+    </style>
+</head>
+<body>
+    <form action="/loginuser" method="post">
+        <div class="login">
+    
+            <div class="avatar">
+              <i class="fa fa-user"></i>
+            </div>
+    
+            <h2>Login</h2>
+    
+            <div class="box-login">
+              <i class="fas fa-envelope-open-text"></i>
+              <input type="text" name="username" placeholder="Username" required>
+            </div>
+    
+            <div class="box-login">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="password" placeholder="Password" required>
+            </div>
+            
+            <br>
+
+            <button type="submit" name="login" class="btn-login">Login</button >
+            
+            <div class="bottom" >
+                <a href="/registrasiuser">Register</a>
+            </div>
+        </div>
+
+        <div class="footer">
+          <span>Made with <i class="fa fa-heart pulse"></i> <a
+              href="https://www.google.de/maps/place/Augsburger+Puppenkiste/@48.360357,10.903245,17z/data=!3m1!4b1!4m2!3m1!1s0x479e98006610a511:0x73ac6b9f80c4048f"><a
+                href="https://codepen.io/lordgamer2354">By Aurel</a></span>
+        </div>
+    
+    </form>
+</body>
+</html>

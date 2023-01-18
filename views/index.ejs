@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .home {
+        background: url("https://pngimage.net/wp-content/uploads/2018/06/gambar-makanan-png-1.png")
+        background-size: cover;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        color: rgb(83, 14, 14);
+        } */
+
+        body{
+            display: flex;
+        }
+
+        #hero {
+            width: 100%;
+            height: 100vh;
+            background: url("https://pngimage.net/wp-content/uploads/2018/05/animasi-makanan-png-8.png") top center;
+            background-size: cover;
+            /* position: relative; */
+        }
+
+        .hero-container {
+            display: flex;
+        }
+
+        #hero:before {
+            content: "";
+            background: rgba(58, 160, 169, 0.6);
+            position:fixed;
+            /* display: flex; */
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #hero .hero-container {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        #hero h3 {
+            background: #50577A;
+            color: #E59866;
+            font-size: 26px;
+            padding: 10px 30px;
+            margin-bottom: 30px;
+            border-radius: 50px;
+        }
+
+        #hero h1 {
+            margin: 0 0 10px 0;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 56px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        #hero h2 {
+            color: #eee;
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        #hero .btn-get-started {
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 8px 30px 9px 30px;
+            border-radius: 50px;
+            transition: 0.5s;
+            border: 2px solid #50577A;
+            color: #E59866;
+        }
+
+        #hero .btn-get-started:hover {
+            background: #50577A;
+            border: 2px solid #50577A;
+        }
+
+        @media (min-width: 1024px) {
+            #hero {
+                background-attachment: fixed;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #hero h3 {
+                font-size: 22px;
+            }
+
+            #hero h1 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            #hero h2 {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-height: 500px) {
+            #hero {
+                height: 150vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container-fluid home">
+        <div class="container text-center">
+          <h1 class="display-6">Pesan Makan</h1>
+          <h4 class="display-6"></h4>
+          <img src="https://pngimage.net/wp-content/uploads/2018/05/animasi-makanan-png-8.png" height="500px"
+          align="right" />
+            <button class="button button1"><a href="/loginuser">user</a></button>
+            <button class="button button1"> <a href="/loginadmin">admin</a> </button>
+          </a>
+        </div>
+      </div> -->
+    <!-- <div class="wrapper">
+        <section id="home">
+            <img src="https://pngimage.net/wp-content/uploads/2018/05/animasi-makanan-png-8.png" height="650px">
+            <div class="kolom">
+                <p class="deskripsi">Pesan makanan mu sekarang</p>
+                <h2>FooD</h2>
+                <p>Sering dilanda lapar di tengah malam? atau bahkan binggung untuk makan apa? Tak perlu khawatir, terdapat aplikasi pesan makanan Food yang akan membantu anda. Aplikasi ini di desain untuk menghapus rasa laparmu!</p>
+                <p><a href="/loginuser" class="tbl-pink">User</a> or <a href="/loginadmin" class="tbl-pink">Admin</a></p>
+                <br>
+                
+            </div>
+        </section>
+        </div> -->
+    <section id="hero">
+        <div class="hero-container">
+            <h3>Welcome to <strong>FooD</strong></h3>
+            <h1>Pesan makanan</h1>
+            <!-- <h2>Sering dilanda lapar di tengah malam? atau bahkan binggung untuk makan apa?Tak perlu khawatir, terdapat aplikasi pesan makanan Food yang akan membantu anda. Aplikasi ini di desain untuk menghapus rasa laparmu!</h2> -->
+            <a href="/loginuser" class="btn-get-started scrollto">login</a>
+            <h2>or</h2>
+            <a href="/loginadmin" class="btn-get-started scrollto">login as admin</a>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>

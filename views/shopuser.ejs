@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body class="bg-stone-200" >
+    <header class="bg-stone-800 text-white p-4 shadow-lg" style="background-color:#50577A ;">
+		<h1 class="text-center font-bold text-xl">Menu</h1>
+	</header>
+	<section class="p-4 mt-4 bg-white shadow-lg">
+		<h2 class="font-bold text-lg mb-4 border-b">Transaksi Item</h2>
+		<form action="/items/transaksiuser" method="post">
+			<div class="flex items-center">
+				<select name="type" class="w-1/5 w-full border px-3 py-2 text-sm mr-2 bg-white">
+					<!-- <option value="masuk">Masuk</option> -->
+					<option value="keluar">Keluar</option>
+					</select>
+				<select name="item_id" class="w-2/5 w-full border px-3 py-2 text-sm mr-2 bg-white">
+					<% for (item of items) { %>
+						<option value="<%= item.id %>"><%= item.name %></option>
+					<% } %>
+				</select>
+				<input type="number" name="amount" value="0" class="w-1/5 w-full border px-3 py-2 text-sm mr-2 bg-white">
+				<button class="w-1/5 bg-slate-500 text-white px-3 py-2 border text-sm font-bold tracking-widest hover:bg-slate-600" onclick="alert('pembelian berhasil')">buy</button>
+			</div>
+		</form>
+	</section>
+	<section class="p-4 mt-4 bg-white shadow-lg">
+		<h2 class="font-bold text-lg mb-4 border-b">List Item</h2>
+		<div>
+			<% for (item of items) { %>
+			<div class="border-b mb-2 flex items-center pb-3">
+				<div class="flex-1 tracking-wide leading-none"><%= item.name %></div>
+				<div class="flex-1 tracking-wide leading-none"><%= item.harga %></div>
+				<div class="flex-1 tracking-wide leading-none"><img width="100px" height="100px" src="<%= item.gambar %>"></div>
+				<div class="w-12 text-right mr-3 bg-green-500 text-white px-2 py-1 text-xs tracking-widest font-semibold leading-none"><%= item.qty %></div>
+			</div>
+			<% } %>
+		</div>
+	</section>
+</body>
+</html>
